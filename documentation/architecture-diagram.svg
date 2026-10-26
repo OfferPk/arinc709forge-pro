@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="1000" height="650" style="background:#07090e; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="grad-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="8" fill="url(#grad-card)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="55" y="60" fill="#06b6d4" font-size="22" font-weight="800" letter-spacing="-0.5">ARINC 709A MARK 5 DME &amp; DME/DME RNAV SYSTEM ARCHITECTURE</text>
+  <text x="55" y="80" fill="#94a3b8" font-size="12">Airborne Interrogator LRU, UHF Pulse-Pair Timing (12.3592 µs/NM), Multi-Channel Scanning &amp; ARINC 429 Bus</text>
+
+  <!-- Left: Inputs & Radio Frequency Front-End -->
+  <rect x="30" y="115" width="280" height="495" rx="8" fill="url(#grad-card)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="115" width="280" height="38" rx="8" fill="#1e293b"/>
+  <text x="50" y="140" fill="#f8fafc" font-size="14" font-weight="700">RF INTERROGATION &amp; TUNING</text>
+
+  <!-- VHF NAV Tuning Pair -->
+  <rect x="50" y="170" width="240" height="90" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="65" y="195" fill="#38bdf8" font-size="12" font-weight="700">VHF NAV Frequency Ingestion</text>
+  <text x="65" y="215" fill="#94a3b8" font-size="11">• VOR/ILS Freq: 108.00–117.95 MHz</text>
+  <text x="65" y="235" fill="#94a3b8" font-size="11">• Paired DME Channels: 1X–126Y</text>
+  <text x="65" y="250" fill="#34d399" font-size="10">ARINC 429 Label 035 (BCD Tuning)</text>
+
+  <!-- Pulse-Pair Timing -->
+  <rect x="50" y="275" width="240" height="90" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="65" y="300" fill="#34d399" font-size="12" font-weight="700">UHF Pulse-Pair Generator</text>
+  <text x="65" y="320" fill="#94a3b8" font-size="11">• Channel X: 12 µs Pulse Spacing</text>
+  <text x="65" y="340" fill="#94a3b8" font-size="11">• Channel Y: 36 µs Pulse Spacing</text>
+  <text x="65" y="355" fill="#38bdf8" font-size="10">Transmit Power: 1,000 W Peak Pulsed</text>
+
+  <!-- UHF Transceiver RF -->
+  <rect x="50" y="380" width="240" height="90" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="65" y="405" fill="#fbbf24" font-size="12" font-weight="700">UHF Receiver &amp; Transponder Delay</text>
+  <text x="65" y="425" fill="#94a3b8" font-size="11">• Ground Delay X: 50.0 µs</text>
+  <text x="65" y="445" fill="#94a3b8" font-size="11">• Ground Delay Y: 56.0 µs</text>
+  <text x="65" y="460" fill="#94a3b8" font-size="10">Radar Mile Constant: 12.3592 µs/NM</text>
+
+  <!-- Audio Ident -->
+  <rect x="50" y="485" width="240" height="105" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="65" y="510" fill="#c084fc" font-size="12" font-weight="700">Station Ident Audio Demodulator</text>
+  <text x="65" y="530" fill="#94a3b8" font-size="11">• 1350 Hz Audio Tone Filter</text>
+  <text x="65" y="550" fill="#94a3b8" font-size="11">• International Morse Code Keying</text>
+  <text x="65" y="570" fill="#34d399" font-size="10">• e.g. "DXB" (-.. -..- -...)</text>
+
+  <!-- Middle: Dual DME Interrogator LRU Core -->
+  <rect x="340" y="115" width="320" height="495" rx="8" fill="url(#grad-card)" stroke="#0891b2" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="115" width="320" height="38" rx="8" fill="#0891b2"/>
+  <text x="360" y="140" fill="#ffffff" font-size="14" font-weight="800">MARK 5 DME INTERROGATOR (4-MCU)</text>
+
+  <rect x="360" y="170" width="280" height="130" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="375" y="195" fill="#10b981" font-size="13" font-weight="700">DME 1 INTERROGATOR (CAPTAIN)</text>
+  <text x="375" y="215" fill="#cbd5e1" font-size="11">• Primary Onside Tracking Receiver</text>
+  <text x="375" y="235" fill="#cbd5e1" font-size="11">• Slant Range Math: R_slant = (T_RTT - 50)/12.36</text>
+  <text x="375" y="255" fill="#cbd5e1" font-size="11">• PRF Controller: Search (150 pps) / Track (25 pps)</text>
+  <text x="375" y="280" fill="#10b981" font-size="11" font-weight="600">STATUS: ACTIVE TRACK (SDI 1 / BUS A)</text>
+
+  <rect x="360" y="315" width="280" height="130" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="375" y="340" fill="#94a3b8" font-size="13" font-weight="700">DME 2 INTERROGATOR (FIRST OFFICER)</text>
+  <text x="375" y="360" fill="#94a3b8" font-size="11">• Dual-Redundant Standby/Co-Pilot Unit</text>
+  <text x="375" y="380" fill="#94a3b8" font-size="11">• Cross-Talk Bus Synchronizer &amp; BITE Check</text>
+  <text x="375" y="400" fill="#94a3b8" font-size="11">• Independent Antenna Diplexer Interface</text>
+  <text x="375" y="425" fill="#f59e0b" font-size="11" font-weight="600">STATUS: HOT STANDBY (SDI 2 / BUS B)</text>
+
+  <!-- 10-Second Memory Hold -->
+  <rect x="360" y="460" width="280" height="130" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="375" y="485" fill="#06b6d4" font-size="12" font-weight="700">10-Second Memory Hold Protection</text>
+  <text x="375" y="505" fill="#94a3b8" font-size="11">• Prevents lock dropout during steep bank turns</text>
+  <text x="375" y="525" fill="#94a3b8" font-size="11">• Extrapolates distance using last valid groundspeed</text>
+  <text x="375" y="545" fill="#94a3b8" font-size="11">• Automatic reversion to Search if signal &gt; 10s</text>
+  <text x="375" y="570" fill="#34d399" font-size="11" font-weight="600">FAA TSO-C66c / RTCA DO-189 COMPLIANT</text>
+
+  <!-- Right: Multi-Channel Scanning & FMS DME/DME RNAV -->
+  <rect x="690" y="115" width="280" height="495" rx="8" fill="url(#grad-card)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="690" y="115" width="280" height="38" rx="8" fill="#1e293b"/>
+  <text x="710" y="140" fill="#f8fafc" font-size="14" font-weight="700">MULTI-CHANNEL SCAN &amp; BUS</text>
+
+  <!-- 5-Channel Scanning Matrix -->
+  <rect x="710" y="170" width="240" height="150" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="725" y="195" fill="#38bdf8" font-size="12" font-weight="700">5-Channel Scanning DME</text>
+  <text x="725" y="215" fill="#94a3b8" font-size="11">• CH 1: Onside Display (DXB 115.30)</text>
+  <text x="725" y="235" fill="#94a3b8" font-size="11">• CH 2: FMS RNAV Auto 1 (SHJ 113.60)</text>
+  <text x="725" y="255" fill="#94a3b8" font-size="11">• CH 3: FMS RNAV Auto 2 (ALN 117.10)</text>
+  <text x="725" y="275" fill="#94a3b8" font-size="11">• CH 4: FMS RNAV Auto 3 (FUJ 114.90)</text>
+  <text x="725" y="295" fill="#94a3b8" font-size="11">• CH 5: FMS RNAV Auto 4 (RAK 112.40)</text>
+
+  <!-- ARINC 429 Bus Words -->
+  <rect x="710" y="335" width="240" height="255" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="725" y="360" fill="#34d399" font-size="12" font-weight="700">ARINC 429 Avionics Bus Words</text>
+  <text x="725" y="380" fill="#94a3b8" font-size="11">• Label 035: Tuning BCD</text>
+  <text x="725" y="400" fill="#94a3b8" font-size="11">• Label 201: Distance BNR (0.125 NM)</text>
+  <text x="725" y="420" fill="#94a3b8" font-size="11">• Label 202: Groundspeed / Time</text>
+  <text x="725" y="440" fill="#94a3b8" font-size="11">• Label 270: Operating Mode/Status</text>
+  <text x="725" y="460" fill="#94a3b8" font-size="11">• Label 350: Maintenance Fault/BITE</text>
+  <text x="725" y="485" fill="#06b6d4" font-size="11" font-weight="700">Bit 32 Odd Parity: Strictly Enforced</text>
+  <text x="725" y="505" fill="#38bdf8" font-size="10">Destination: FMS, PFD, ND, DDRMI</text>
+  <text x="725" y="525" fill="#34d399" font-size="10">Sub-0.1 NM Position Fix Precision</text>
+  <text x="725" y="545" fill="#fbbf24" font-size="10">Anti-Spoofing / Anti-Jamming Fallback</text>
+  <text x="725" y="570" fill="#10b981" font-size="11" font-weight="700">ARINC 709A CERTIFIED</text>
+</svg>
